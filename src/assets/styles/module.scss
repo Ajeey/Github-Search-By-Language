@@ -10,3 +10,17 @@
     font-size: 3em;
     color: #0B1E2F;
 }
+
+.ui-menu .ui-menu-item a.ui-corner-all:hover, .ui-menu .ui-menu-item a.ui-corner-all:focus, .ui-menu .ui-menu-item a.ui-corner-all:active {
+    background:#7a26e8!important;
+    color:#000;
+    border-radius:0;
+}
+
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
+    background: #7a26e8;
+    border: none;
+    color:#FFF;
+    border-radius:0;
+    font-weight: normal;
+}
