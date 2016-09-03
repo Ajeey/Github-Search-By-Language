@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/home/home.component.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">app/home/</a> home.component.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">25.25% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>25/99</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">4% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/25</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">24.74% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>24/97</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Component, ElementRef, AfterViewInit } from '@angular/core';
+import { Search } from './search';
+import { GithubSearchService } from './github.service';
+import { CONSTANTS } from '../shared';
+&nbsp;
+declare var $:any;
+&nbsp;
+@Component({
+    selector: 'as-home',
+    templateUrl: 'app/home/home.html',
+    styleUrls: [
+        'app/home/home.css'
+    ],
+   directives: [  ],
+    providers: [ GithubSearchService ]
+})
+export class HomeComponent implements AfterViewInit {
+    public <span class="cstat-no" title="statement not covered" >repos: Array&lt;any&gt; = [];</span>
+    public <span class="cstat-no" title="statement not covered" >originalRepos: Array&lt;any&gt; = [];</span>
+    public <span class="cstat-no" title="statement not covered" >languageTags: Array&lt;any&gt; = [];</span>
+&nbsp;
+    public elementRef: ElementRef;
+    public strings;
+    public <span class="cstat-no" title="statement not covered" >model = new Search('');</span>
+    public <span class="cstat-no" title="statement not covered" >fetching: Boolean = false;</span>
+    public <span class="cstat-no" title="statement not covered" >isError: Boolean = false;</span>
+    public <span class="cstat-no" title="statement not covered" >isEmpty = null;</span>
+    public <span class="cstat-no" title="statement not covered" >repoCount = 0;</span>
+    public <span class="cstat-no" title="statement not covered" >pageNumber = 1;</span>
+    public <span class="cstat-no" title="statement not covered" >loadingMore = false;</span>
+    public <span class="cstat-no" title="statement not covered" >maxStarCount = 100;</span>
+    public sliderMaxCount;
+    public starSlider;
+    public <span class="cstat-no" title="statement not covered" >sortedByHighest = true;</span>
+    public <span class="cstat-no" title="statement not covered" >sortedByLowest = false;</span>
+    public totalRateLimit;
+    public totalRateLimitRemaining;
+    
+<span class="fstat-no" title="function not covered" >    constructor(private <span class="cstat-no" title="statement not covered" >githubSearchService: GithubSearchService,</span> elementRef: ElementRef)</span> {
+<span class="cstat-no" title="statement not covered" >        this.elementRef = elementRef;</span>
+<span class="cstat-no" title="statement not covered" >        this.strings = CONSTANTS.MAIN.APP;</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    onSubmit() { </span>
+<span class="cstat-no" title="statement not covered" >        this.fetching = true;</span>
+<span class="cstat-no" title="statement not covered" >        this.clearRepos();</span>
+<span class="cstat-no" title="statement not covered" >        this.fetchRepos(this.pageNumber);</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    fetchRepos(pageNumber)</span> {
+<span class="cstat-no" title="statement not covered" >        this.githubSearchService.getReposByUsername(this.model.text, pageNumber)</span>
+                        .subscribe(
+                            this.success.bind(this),
+                            this.error.bind(this)
+                        );
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    fetchNextPage() {</span>
+<span class="cstat-no" title="statement not covered" >        this.loadingMore = true;</span>
+<span class="cstat-no" title="statement not covered" >        this.pageNumber++;</span>
+<span class="cstat-no" title="statement not covered" >        this.fetchRepos(this.pageNumber);</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    clearRepos() {</span>
+<span class="cstat-no" title="statement not covered" >        this.repos = [];</span>
+<span class="cstat-no" title="statement not covered" >        this.originalRepos = [];</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    success(repos)</span> {
+<span class="cstat-no" title="statement not covered" >        this.repos = this.repos.concat(repos.items);</span>
+<span class="cstat-no" title="statement not covered" >        this.originalRepos = this.repos;</span>
+<span class="cstat-no" title="statement not covered" >        this.repoCount = repos.total_count;</span>
+        
+<span class="cstat-no" title="statement not covered" >        this.isError = false;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if(repos.length === 0) {</span>
+<span class="cstat-no" title="statement not covered" >            this.isEmpty = true;</span>
+        } else {
+<span class="cstat-no" title="statement not covered" >            this.isEmpty = false;</span>
+<span class="cstat-no" title="statement not covered" >            this.getMaxStarCount();</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        this.fetching = false;</span>
+<span class="cstat-no" title="statement not covered" >        this.loadingMore = false;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        this.fetchRateLimit();</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    error(error)</span> {
+<span class="cstat-no" title="statement not covered" >        this.handleError();</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    fetchRateLimit() {</span>
+<span class="cstat-no" title="statement not covered" >        this.githubSearchService.getApiRateLimit()</span>
+                                .subscribe(
+                                    this.rateLimitSuccess.bind(this),
+                                    this.rateLimitFailure.bind(this)
+                                );
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    rateLimitSuccess(response)</span> {
+<span class="cstat-no" title="statement not covered" >        this.totalRateLimit = response.limit;</span>
+<span class="cstat-no" title="statement not covered" >        this.totalRateLimitRemaining = response.remaining;</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    rateLimitFailure(error)</span> {
+<span class="cstat-no" title="statement not covered" >        console.error("Could not get rate limit response", error);</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    getMaxStarCount() {</span>
+<span class="cstat-no" title="statement not covered" >        this.maxStarCount = this.repos[0].stargazers_count;</span>
+<span class="cstat-no" title="statement not covered" >        this.sliderMaxCount = this.maxStarCount;</span>
+<span class="cstat-no" title="statement not covered" >        this.starSlider.slider("option", "max", this.maxStarCount);</span>
+<span class="cstat-no" title="statement not covered" >        this.starSlider.slider("option", "value", this.maxStarCount);</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    handleError() {</span>
+<span class="cstat-no" title="statement not covered" >        this.fetching = false;</span>
+<span class="cstat-no" title="statement not covered" >        this.isError = true;</span>
+<span class="cstat-no" title="statement not covered" >        this.isEmpty = false;</span>
+<span class="cstat-no" title="statement not covered" >        this.repos = null;</span>
+<span class="cstat-no" title="statement not covered" >        this.repoCount = 0;</span>
+    }
+&nbsp;
+    // Slider Range Change detection
+<span class="fstat-no" title="function not covered" >    filterReposByStar(stars)</span> {
+<span class="cstat-no" title="statement not covered" >       this.repos =  this.originalRepos.filter(<span class="fstat-no" title="function not covered" >function(repo)</span> {</span>
+<span class="cstat-no" title="statement not covered" >            return repo.stargazers_count &lt;= stars;</span>
+        });
+&nbsp;
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    sortByHighest() {</span>
+<span class="cstat-no" title="statement not covered" >        this.repos = this.originalRepos.sort(<span class="fstat-no" title="function not covered" >function(item1, item2)</span>:any {</span>
+            // return item1.stargazers_count &gt;= item2.stargazers_count;
+<span class="cstat-no" title="statement not covered" >            return item2.stargazers_count - item1.stargazers_count; </span>
+        });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        this.sortedByHighest = true;</span>
+<span class="cstat-no" title="statement not covered" >        this.sortedByLowest = false;</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    sortByLowest() {</span>
+<span class="cstat-no" title="statement not covered" >        this.repos = this.originalRepos.sort(<span class="fstat-no" title="function not covered" >function(item1, item2)</span>:any {</span>
+            // return item1.stargazers_count &gt;= item2.stargazers_count;
+<span class="cstat-no" title="statement not covered" >            return item1.stargazers_count - item2.stargazers_count;</span>
+        });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        console.log(this.repos);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        this.sortedByLowest = true;</span>
+<span class="cstat-no" title="statement not covered" >        this.sortedByHighest = false;</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    toggleFilterContainer(e)</span> {
+<span class="cstat-no" title="statement not covered" >        let currentElement = $(e.currentTarget);</span>
+<span class="cstat-no" title="statement not covered" >        currentElement.toggleClass("up-arrow");</span>
+<span class="cstat-no" title="statement not covered" >        $(this.elementRef.nativeElement).find(".filter-options").slideToggle();</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    ngAfterViewInit() {</span>
+<span class="cstat-no" title="statement not covered" >        let self = this;</span>
+        
+        // Init Autocomplete
+<span class="cstat-no" title="statement not covered" >        this.githubSearchService.getLanguageTags().subscribe(<span class="fstat-no" title="function not covered" >function(tags)</span>{</span>
+<span class="cstat-no" title="statement not covered" >            this.languageTags = tags;</span>
+<span class="cstat-no" title="statement not covered" >            $(this.elementRef.nativeElement).find(".search-text").autocomplete({</span>
+                source: this.languageTags,
+                select: <span class="fstat-no" title="function not covered" >function( event, ui </span>) {
+<span class="cstat-no" title="statement not covered" >                    console.log(ui.item.value);</span>
+<span class="cstat-no" title="statement not covered" >                    self.model.text = ui.item.value; </span>
+                }
+            });
+        }.bind(this), <span class="fstat-no" title="function not covered" >function(error)</span>{
+<span class="cstat-no" title="statement not covered" >            console.error("Could not fetch language tags", error);</span>
+        }.bind(this));
+&nbsp;
+        // Initialize Slider
+<span class="cstat-no" title="statement not covered" >        this.starSlider = $(this.elementRef.nativeElement).find("#slider").slider({</span>
+            range: false,
+            min: 0,
+            max: 20000,
+            value: this.maxStarCount,
+            slide: <span class="fstat-no" title="function not covered" >( event, ui </span>) =&gt; {
+<span class="cstat-no" title="statement not covered" >                this.maxStarCount = ui.value;</span>
+<span class="cstat-no" title="statement not covered" >                this.filterReposByStar(ui.value);</span>
+            }
+        });
+    }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Sep 04 2016 02:11:00 GMT+0530 (IST)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

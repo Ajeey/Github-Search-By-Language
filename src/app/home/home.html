@@ -1,0 +1,83 @@
+<div class="filter-container" [hidden]="!repoCount"> 
+    <!-- [hidden]="!repoCount" -->
+    <h3 class="refine-title"><i class="fa fa-filter" aria-hidden="true"></i> Refine </h3>
+    <i (click)="toggleFilterContainer($event)" class="fa fa-angle-down toggle-filter-container" aria-hidden="true"></i>
+
+    <div class="filter-options">
+        <div class="range-container">
+            <label class="filter-title">Stars</label>
+            <div id="slider"></div>
+            <ul class="star-list clearfix">
+                <li class="star-count">0</li>
+                <li class="star-count sider-value">{{maxStarCount}}</li>
+                <li class="star-count">{{sliderMaxCount}}</li>
+            </ul>
+        </div>
+
+        <div class="sort-container">
+            <label class="filter-title">Sort by </label> - 
+            <label class="sort-by" (click)="sortByHighest()" [class.active]="sortedByHighest">Highest <i class="fa fa-star" aria-hidden="true"></i></label>
+            <label class="sort-by" (click)="sortByLowest()" [class.active]="sortedByLowest">Lowest <i class="fa fa-star" aria-hidden="true"></i></label>
+        </div>
+
+        <div class="rate-limit-conainer">
+            <label class="filter-title">Rate Limit</label>
+            <div class="rate-stats">{{totalRateLimitRemaining}}/{{totalRateLimit}}</div>
+        </div>
+    </div>
+</div>
+
+<div class="row search-container">
+    <div class="col-lg-12 col-md-12">
+        <div class="col-lg-6 col-md-6">
+            <form (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <input type="text" class="form-control search-text" required name="search" placeholder="Search By Language" autocomplete="off"
+                    [(ngModel)]="model.text" >
+                </div>
+
+                <button type="submit" class="btn search-button" [disabled]="fetching" >Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<i class="center-fix main-spinner fa fa-spin fa-spinner" [hidden]="!fetching"></i>
+
+<div class="row">
+    <div class="error-message" [hidden]="!isError">
+        <div>{{strings.ERROR_MSG}}</div>
+    </div>
+
+    <div *ngIf="isEmpty" class="empty-message">
+        <div>{{strings.EMPTY_REPOS}}</div>
+    </div>
+
+    <div class="col-lg-12 col-md-12 repos-container">
+        <div *ngIf="repos && repos.length" class="repos">
+            <div class="col-lg-3 col-md-4 col-sm-10 col-xs-10 repo" *ngFor="let repo of repos">
+                <div>
+                    <div class="name">{{repo.name}}</div>
+                    <div class="details">   
+                        <div class="desc"><i class="fa fa-book" aria-hidden="true"></i> {{repo.description}}</div>
+                        <div class="stars"><i class="fa fa-star" aria-hidden="true"></i> {{repo.stargazers_count}}</div>
+                        <div class="language">{{repo.language}}</div>
+                    </div>
+                    <a [href]="repo.html_url" target="_blank" class="link">
+                        {{strings.EXPLORE_PROJECT}}
+                    </a>
+                </div>
+            </div>
+
+            <div class="load-more-container col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <button (click)="fetchNextPage()" class="btn btn-info load-more" [disabled]="loadingMore"> 
+                    <i class=" fa fa-spin fa-spinner fa-2" [hidden]="!loadingMore"></i>
+                    Load More 
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    

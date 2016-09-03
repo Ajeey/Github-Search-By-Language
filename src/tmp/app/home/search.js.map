@@ -1,0 +1,1 @@
+{"version":3,"sources":["app/home/search.ts"],"names":[],"mappings":";AAAA;IAEI,gBACW,IAAY;QAAZ,SAAI,GAAJ,IAAI,CAAQ;IACpB,CAAC;IACR,aAAC;AAAD,CALA,AAKC,IAAA;AALY,cAAM,SAKlB,CAAA","file":"app/home/search.js","sourcesContent":["export class Search {\n\n    constructor (\n        public text: string\n    ) {}\n} \n"],"sourceRoot":"/source/"}
